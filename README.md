@@ -75,7 +75,7 @@ ETags, and you can set a `GITHUB_TOKEN` environment variable for a higher limit.
 
 ## Build from source
 
-Requires [Inno Setup 6](https://jrsoftware.org/isinfo.php) (`winget install JRSoftware.InnoSetup`).
+Double-click `build.cmd` (or run `.build.ps1`). The build uses [Inno Setup 6](https://jrsoftware.org/isinfo.php) and installs it for you (per-user, via winget, or from jrsoftware.org with a signature check) if it is missing.
 
 ```powershell
 .\build.ps1 -Version 1.0.0     # -> dist\StorytoldUpdaterSetup.exe + SHA256SUMS.txt
