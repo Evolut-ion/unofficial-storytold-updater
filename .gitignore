@@ -1,0 +1,6 @@
+dist/
+*.log
+*.tsv
+http-cache.json
+state.json
+config.json
