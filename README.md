@@ -1,4 +1,4 @@
-# Storytold Updater
+# Unofficial Storytold Updater
 
 A small Windows tool that installs and updates the portable Windows x64 builds of the
 apps published at [github.com/storytold](https://github.com/storytold) (PhotoCraft,

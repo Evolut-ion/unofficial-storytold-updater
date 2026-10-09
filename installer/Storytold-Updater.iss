@@ -1,7 +1,7 @@
 ; Copyright (c) 2026 OfficialEv0 - MIT License (see ..\LICENSE)
-; Storytold Updater - staged installer
+; Unofficial Storytold Updater - staged installer
 ; Build:  ..\build.ps1   (or ISCC.exe Storytold-Updater.iss)   ->  ..\dist\StorytoldUpdaterSetup.exe
-#define AppName    "Storytold Updater"
+#define AppName    "Unofficial Storytold Updater"
 #ifndef AppVersion
   #define AppVersion "1.0.0"   ; CI overrides this with /DAppVersion=<tag>
 #endif
@@ -44,8 +44,8 @@ Name: startmenuicon; Description: "Create a &Start Menu shortcut for the updater
 Name: dailycheck;    Description: "&Check for updates every day at noon and install them silently (apps that are open are skipped)"; Flags: unchecked
 
 [Icons]
-Name: "{autodesktop}\Storytold Updater"; Filename: "{#PS}"; Parameters: "{code:UpdaterArgs}"; WorkingDir: "{app}"; IconFilename: "{app}\updater.ico"; Tasks: desktopicon
-Name: "{autoprograms}\Storytold\Storytold Updater"; Filename: "{#PS}"; Parameters: "{code:UpdaterArgs}"; WorkingDir: "{app}"; IconFilename: "{app}\updater.ico"; Tasks: startmenuicon
+Name: "{autodesktop}\Unofficial Storytold Updater"; Filename: "{#PS}"; Parameters: "{code:UpdaterArgs}"; WorkingDir: "{app}"; IconFilename: "{app}\updater.ico"; Tasks: desktopicon
+Name: "{autoprograms}\Storytold\Unofficial Storytold Updater"; Filename: "{#PS}"; Parameters: "{code:UpdaterArgs}"; WorkingDir: "{app}"; IconFilename: "{app}\updater.ico"; Tasks: startmenuicon
 
 [Run]
 Filename: "schtasks.exe"; Parameters: "/Create /F /TN ""Storytold Updater"" /SC DAILY /ST 12:00 /TR ""{#PS} -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \""{app}\StorytoldUpdater.ps1\"" -Update -LogFile \""{localappdata}\StorytoldUpdater\auto.log\"""""; Flags: runhidden; Tasks: dailycheck

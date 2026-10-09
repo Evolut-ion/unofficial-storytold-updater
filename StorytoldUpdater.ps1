@@ -1,5 +1,5 @@
 <#
-  Storytold Updater  (unofficial community tool - not affiliated with Storytold / ArtCraft)
+  Unofficial Storytold Updater  (community tool - not affiliated with Storytold / ArtCraft)
   Copyright (c) 2026 OfficialEv0 - MIT License, see LICENSE
   Keeps the portable Windows x64 builds from github.com/storytold up to date.
 
@@ -327,7 +327,7 @@ if ($List -or $Update -or $Install -or $ListFile) {
 # ================= GUI =================
 Add-Type -AssemblyName System.Windows.Forms, System.Drawing
 [System.Windows.Forms.Application]::EnableVisualStyles()
-$form = New-Object Windows.Forms.Form -Property @{ Text = 'Storytold Updater'; Width = 1100; Height = 760; StartPosition = 'CenterScreen' }
+$form = New-Object Windows.Forms.Form -Property @{ Text = 'Unofficial Storytold Updater'; Width = 1100; Height = 760; StartPosition = 'CenterScreen' }
 $top  = New-Object Windows.Forms.FlowLayoutPanel -Property @{ Dock = 'Top'; Height = 44; Padding = '8,8,8,0' }
 function Btn($t) { New-Object Windows.Forms.Button -Property @{ Text = $t; AutoSize = $true; Margin = '0,0,8,0' } }
 $bRefresh = Btn 'Refresh'; $bSel = Btn 'Install / update selected'; $bAll = Btn 'Update all installed'
